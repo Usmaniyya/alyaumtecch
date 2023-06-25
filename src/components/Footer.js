@@ -5,7 +5,7 @@ import { GithubIcon, LinkedInIcon, TwitterIcon } from './Icons'
 
 const Footer = () => {
   return (
-    <footer className="p-8 text-light border-t border-solid border-light flex items-center justify-between">
+    <footer className="p-8 text-light border-t border-solid border-light flex md:flex-col gap-y-4 items-center justify-between">
       <div className="text-light">
         <Image src={Logo} alt="AlyaumTech Logo" width={100} height={100} />
       </div>

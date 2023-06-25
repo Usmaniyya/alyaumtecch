@@ -19,7 +19,7 @@ import {
 
 const Products = ({ title, summary, link }) => {
   return (
-    <div className="col-span-1 flex flex-col gap-3 border border-solid border-light p-6 ">
+    <div className="col-span-1 md:col-span-3 flex flex-col gap-3 border border-solid border-light p-6 ">
       <h3 className="text-xl font-semibold text-center text-secondary">
         {title}
       </h3>
@@ -31,10 +31,12 @@ const Products = ({ title, summary, link }) => {
 
 const Services = ({ service, icon, summary }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-16">
-      <div className="w-80 md:w-1/3 p-8 flex flex-col gap-y-6 text-center rounded-lg shadow-3xl hover:scale-110 hover:transition-all border border-light border-solid">
-        <p className="self-center">{icon}</p>
-        <p className="">{service}</p>
+    <div className="col-span-1 md:col-span-3">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-16">
+        <div className="md:w-full w-80 p-8 md:p-16 flex flex-col gap-y-6 text-center rounded-lg shadow-3xl hover:scale-110 hover:transition-all border border-light border-solid">
+          <p className="self-center">{icon}</p>
+          <p className="">{service}</p>
+        </div>
       </div>
     </div>
   )
@@ -49,7 +51,7 @@ const Team = ({
   githubLink,
 }) => {
   return (
-    <div className="col-span-1 flex flex-col gap-y-4 items-center p-4 py-6 border border-solid border-light">
+    <div className="col-span-1 md:col-span-4 flex flex-col gap-y-4 items-center p-4 py-6 border border-solid border-light">
       <Image src={img} alt={name} className="w-44 h-44 rounded-full" />
       <h3 className="text-xl font-semibold">{fullName}</h3>
       <p>{bio}</p>
@@ -113,22 +115,25 @@ export default function Home() {
             </div>
           </div>
           <div className="my-32 grid grid-cols-2 gap-6">
-            <div className="col-span-1 flex flex-col gap-y-2">
-              <h2 className="font-bold text-xl text-secondary">Mission</h2>
+            <div className="col-span-1 md:col-span-2 flex flex-col gap-y-2">
+              <h2 className="font-bold text-xl text-secondary underline underline-offset-2">
+                Mission
+              </h2>
               <p className="text-lg">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                To empower businesses with cutting-edge software solutions,
+                leveraging innovative technologies, and delivering exceptional
+                value through tailored development services.
               </p>
             </div>
-            <div className="col-span-1 flex flex-col gap-y-2">
-              <h2 className="font-bold text-xl text-secondary">Vision</h2>
+            <div className="col-span-1 md:col-span-2 flex flex-col gap-y-2">
+              <h2 className="font-bold text-xl text-secondary underline underline-offset-2 md:text-right">
+                Vision
+              </h2>
               <p className="text-lg">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                To be a leading software development partner for startups,
+                recognized for our commitment to excellence, agility in
+                delivery, and driving digital transformation through impactful
+                solutions.
               </p>
             </div>
           </div>
@@ -147,7 +152,7 @@ export default function Home() {
                   <Link
                     href="/alyaum.ng"
                     target="_blank"
-                    className=" mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-dark self-center"
+                    className="mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-light self-center"
                   >
                     Read more
                   </Link>
@@ -160,7 +165,7 @@ export default function Home() {
                   <Link
                     href="/alyaum.ng"
                     target="_blank"
-                    className=" mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-dark self-center"
+                    className=" mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-light self-center"
                   >
                     Read more
                   </Link>
@@ -175,7 +180,7 @@ export default function Home() {
                   <Link
                     href="/alyaum.ng"
                     target="_blank"
-                    className=" mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-dark self-center"
+                    className=" mt-6 p-1 px-4 border border-solid border-light bg-secondary w-fit text-center text-light self-center"
                   >
                     Read more
                   </Link>
