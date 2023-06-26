@@ -20,7 +20,7 @@ import {
 const Products = ({ title, summary, link }) => {
   return (
     <div className="col-span-1 md:col-span-3 flex flex-col gap-3 border border-solid border-light p-6 ">
-      <h3 className="text-xl font-semibold text-center text-secondary">
+      <h3 className="text-xl md:text-lg font-semibold text-center text-secondary">
         {title}
       </h3>
       <p>{summary}</p>
@@ -29,7 +29,7 @@ const Products = ({ title, summary, link }) => {
   )
 }
 
-const Services = ({ service, icon, summary }) => {
+const Services = ({ service, icon }) => {
   return (
     <div className="col-span-1 md:col-span-3">
       <div className="flex flex-col md:flex-row justify-center items-center gap-16">
@@ -53,8 +53,8 @@ const Team = ({
   return (
     <div className="col-span-1 md:col-span-4 flex flex-col gap-y-4 items-center p-4 py-6 border border-solid border-light">
       <Image src={img} alt={name} className="w-44 h-44 rounded-full" />
-      <h3 className="text-xl font-semibold">{fullName}</h3>
-      <p>{bio}</p>
+      <h3 className="text-xl md:text-lg font-semibold">{fullName}</h3>
+      <p className="text-base text-center">{bio}</p>
       <nav className="flex items-center justify-center flex-wrap">
         <a href={twitterLink} target={'_blank'} className="w-6 mr-3 sm:mx-1">
           <TwitterIcon />
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
           <div className="my-32 grid grid-cols-2 gap-6">
             <div className="col-span-1 md:col-span-2 flex flex-col gap-y-2">
-              <h2 className="font-bold text-xl text-secondary underline underline-offset-2">
+              <h2 className="font-bold text-xl md:text-lg text-secondary underline underline-offset-2">
                 Mission
               </h2>
               <p className="text-lg">
@@ -126,7 +126,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col-span-1 md:col-span-2 flex flex-col gap-y-2">
-              <h2 className="font-bold text-xl text-secondary underline underline-offset-2 md:text-right">
+              <h2 className="font-bold text-xl md:text-lg text-secondary underline underline-offset-2 md:text-right">
                 Vision
               </h2>
               <p className="text-lg">
@@ -137,9 +137,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-
           <div className="my-32 flex flex-col gap-3">
-            <h2 className="text-center mb-12 text-4xl font-bold underline underline-offset-2">
+            <h2 className="text-center mb-12 text-4xl md:text-xl font-bold underline underline-offset-2">
               Our Products
             </h2>
             <div className="grid grid-cols-3 gap-6 items-center">
@@ -189,7 +188,7 @@ export default function Home() {
             </div>
           </div>
           <div className="my-32">
-            <h2 className="text-center mb-12 text-4xl font-bold underline underline-offset-2">
+            <h2 className="text-center mb-12 text-4xl md:text-xl font-bold underline underline-offset-2">
               Our Services
             </h2>
             <div className="grid grid-cols-3 gap-6 items-center">
@@ -208,7 +207,7 @@ export default function Home() {
             </div>
           </div>
           <div className="my-32">
-            <h2 className="text-center mb-12 text-4xl font-bold underline underline-offset-2">
+            <h2 className="text-center mb-12 text-4xl md:text-xl font-bold underline underline-offset-2">
               Our Team
             </h2>
             <div className="grid grid-cols-4 gap-2">

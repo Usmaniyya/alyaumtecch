@@ -29,7 +29,7 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <header className="flex w-full justify-between items-center relative text-light p-8 px-12 border-b border-solid border-light">
+    <header className="flex w-full justify-between items-center relative text-light p-8 md:p-6 px-12 md:px-6">
       <div className="text-light">
         <Link href="/">
           <Image
