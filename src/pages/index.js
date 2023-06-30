@@ -19,7 +19,10 @@ import {
 
 const Products = ({ title, summary, link }) => {
   return (
-    <div className="col-span-1 md:col-span-3 flex flex-col gap-3 border border-solid border-light p-6 ">
+    <div
+      id="products"
+      className="col-span-1 md:col-span-3 flex flex-col gap-3 border-2 border-solid border-light p-6 "
+    >
       <h3 className="text-xl md:text-lg font-semibold text-center text-secondary">
         {title}
       </h3>
@@ -31,9 +34,9 @@ const Products = ({ title, summary, link }) => {
 
 const Services = ({ service, icon }) => {
   return (
-    <div className="col-span-1 md:col-span-3">
+    <div id="services" className="col-span-1 md:col-span-3">
       <div className="flex flex-col md:flex-row justify-center items-center gap-16">
-        <div className="md:w-full w-80 p-8 md:p-16 flex flex-col gap-y-6 text-center rounded-lg shadow-3xl hover:scale-110 hover:transition-all border border-light border-solid">
+        <div className="md:w-full w-80 p-8 md:p-16 flex flex-col gap-y-6 text-center rounded-lg shadow-3xl hover:scale-110 hover:transition-all border-2 border-light border-solid">
           <p className="self-center">{icon}</p>
           <p className="">{service}</p>
         </div>
@@ -51,7 +54,7 @@ const Team = ({
   githubLink,
 }) => {
   return (
-    <div className="col-span-1 md:col-span-4 flex flex-col gap-y-4 items-center p-4 py-6 border border-solid border-light">
+    <div className="col-span-1 md:col-span-4 flex flex-col gap-y-4 items-center p-4 py-6 border-2 border-solid border-light">
       <Image src={img} alt={name} className="w-44 h-44 rounded-full" />
       <h3 className="text-xl md:text-lg font-semibold">{fullName}</h3>
       <p className="text-base text-center">{bio}</p>
@@ -103,7 +106,10 @@ export default function Home() {
                 Learn how customized software streamlines processes and helps
                 you realize your dream of a thriving business.
               </p>
-              <div className="flex items-center self-start mt-2 lg:self-center">
+              <div
+                id="contact"
+                className="flex items-center self-start mt-2 lg:self-center"
+              >
                 <Link
                   href="mailto:usmanyahaya6967@gmail.com"
                   target="_blank"
@@ -125,7 +131,10 @@ export default function Home() {
                 value through tailored development services.
               </p>
             </div>
-            <div className="col-span-1 md:col-span-2 flex flex-col gap-y-2">
+            <div
+              className="col-span-1 md:col-span-2 flex flex-col gap-y-2"
+              id="about"
+            >
               <h2 className="font-bold text-xl md:text-lg text-secondary underline underline-offset-2 md:text-right">
                 Vision
               </h2>
@@ -137,7 +146,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="my-32 flex flex-col gap-3">
+          <div className="my-32 flex flex-col gap-3" id="products">
             <h2 className="text-center mb-12 text-4xl md:text-xl font-bold underline underline-offset-2">
               Our Products
             </h2>
@@ -187,22 +196,22 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="my-32">
+          <div className="my-32" id="services">
             <h2 className="text-center mb-12 text-4xl md:text-xl font-bold underline underline-offset-2">
               Our Services
             </h2>
             <div className="grid grid-cols-3 gap-6 items-center">
               <Services
                 service=" Web Development"
-                icon={<SiWebmoney className="w-20 h-20 fill-light" />}
+                icon={<SiWebmoney className="w-20 h-20 fill-secondary" />}
               />
               <Services
                 service="Software Development"
-                icon={<PiDevicesBold className="w-20 h-20 fill-light" />}
+                icon={<PiDevicesBold className="w-20 h-20 fill-secondary" />}
               />
               <Services
                 service="Software Consultancy/Maintenance"
-                icon={<FaDesktop className="w-20 h-20 fill-light" />}
+                icon={<FaDesktop className="w-20 h-20 fill-secondary" />}
               />
             </div>
           </div>

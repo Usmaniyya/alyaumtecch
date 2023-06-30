@@ -9,17 +9,17 @@ const CustomMobileLink = ({ title, href, className = '', toggle }) => {
   }
   return (
     <button onClick={handleClick}>
-      <Link href={href} className={`${className} relative group`}>
+      <a className={`${className} cursor-pointer relative group`} href={href}>
         {title}
-      </Link>
+      </a>
     </button>
   )
 }
 const CustomLink = ({ title, href, className = '' }) => {
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <a className={`${className} cursor-pointer relative group`} href={href}>
       {title}
-    </Link>
+    </a>
   )
 }
 
@@ -32,13 +32,7 @@ const Navbar = () => {
     <header className="flex w-full justify-between items-center relative text-light p-8 md:p-6 px-12 md:px-6">
       <div className="text-light">
         <Link href="/">
-          <Image
-            src={Logo}
-            alt="Logo"
-            className="w-full"
-            width={150}
-            height={150}
-          />
+          <Image src={Logo} alt="Logo" width={150} height={150} />
         </Link>
       </div>
       <div className="flex items-center font-semibold text-lg md:hidden">
@@ -49,17 +43,17 @@ const Navbar = () => {
         />
         <CustomLink
           title="About"
-          href="/about"
+          href="#about"
           className="mx-3 hover:text-secondary"
         />
         <CustomLink
           title="Services"
-          href="/services"
+          href="#services"
           className="mx-3 hover:text-secondary"
         />
         <CustomLink
           title="Products"
-          href="/products"
+          href="#products"
           className="ml-3 hover:text-secondary"
         />
       </div>
@@ -94,19 +88,19 @@ const Navbar = () => {
             />
             <CustomMobileLink
               title="About"
-              href="/about"
+              href="#about"
               className="hover:text-secondary"
               toggle={handleClick}
             />
             <CustomMobileLink
               title="Services"
-              href="/services"
+              href="#services"
               className="hover:text-secondary"
               toggle={handleClick}
             />
             <CustomMobileLink
               title="Products"
-              href="/products"
+              href="#products"
               className="hover:text-secondary"
               toggle={handleClick}
             />
